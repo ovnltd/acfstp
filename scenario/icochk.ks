@@ -1,0 +1,65 @@
+*icochk
+;■ICOチェック
+;----------------------------------------------
+;wait原点設定
+[eval exp="tf.collectionflags  = true"]
+
+[if exp="sf.ico_木花咲耶姫之剱 == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_月下美人 == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_百合香のアーケン == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_堂元のアーケン == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_荻野目のアーケン == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_調査員の始末書 == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_図書塔通信 == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_肉じゃが == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_ピンクローター == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_スタンプラリーシート == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_巨大折り鶴 == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_モフモフにゃんこ == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_怪盗からの手紙 == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_夏への過程 == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_イチゴのショートケーキ == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_椎名の手作り弁当 == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_シンクリング == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_新妻エプロン == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_ブルーフラワー == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_桜雲向日葵の種 == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_肉まん == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_ツーショット写真 == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_ふたつのリボン == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_くず餅アイス添え == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_高咲ほのかブロマイド == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_姫園理沙ブロマイド == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_遊々月あこブロマイド == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_楠久々寝ブロマイド == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_楠響ブロマイド == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_わさびせんべい == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_線香花火 == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_Death == false"][eval exp="tf.collectionflags  = false"][endif]
+[if exp="sf.ico_グロウリアの紙片 == false"][eval exp="tf.collectionflags  = false"][endif]
+;[if exp="sf.ico_コンプリート == false"][eval exp="tf.collectionflags  = false"][endif]
+;[if exp="sf.ico_アペンド1 == false"][eval exp="tf.collectionflags  = false"][endif]
+;[if exp="sf.ico_アペンド2 == false"][eval exp="tf.collectionflags  = false"][endif]
+;[if exp="sf.ico_アペンド3 == false"][eval exp="tf.collectionflags  = false"][endif]
+;[if exp="sf.ico_アペンド4 == false"][eval exp="tf.collectionflags  = false"][endif]
+;[if exp="sf.ico_アペンド5 == false"][eval exp="tf.collectionflags  = false"][endif]
+;[if exp="sf.ico_アペンド6 == false"][eval exp="tf.collectionflags  = false"][endif]
+
+
+
+[if exp="tf.collectionflags == true"]
+	[layer name=mg34 file=MG34 xpos=150 zoom=80 opacity=0 level=6]
+	[mg34 xpos=0 zoom=80 opacity=255 time=2000 accel=-3][wact]
+
+	[se play=se007h buf=1]
+	[icoget name="コンプリート"]
+	[eval exp="sf.clear_コンプリート = 3"]
+	[wait time=3500]
+
+	[mg34 xpos=-150 ypos=0 zoom=80 opacity=0 time=2000 opacity=0 accel=3][wact]
+	[endif]
+
+[mg34 delete]
+[wait time=2000]
+;-------------------------------------------------------------------------------
+[return]

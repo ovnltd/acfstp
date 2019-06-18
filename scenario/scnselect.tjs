@@ -1,0 +1,55 @@
+/**
+ * シナリオ選択接続定義ファイル
+ *
+ * シナリオ選択画面からボタンを押された場合の飛び先と有効／無効条件を設定します
+ */
+%[
+	//------------------------------
+	// After タブ
+
+	"明日葉"   => %[ storage:"scnselect.ks", target:"*start_明日葉" ],
+	"月詠"     => %[ storage:"scnselect.ks", target:"*start_月詠"   ],
+	"椎名"     => %[ storage:"scnselect.ks", target:"*start_椎名"   ],
+	"かりん"   => %[ storage:"scnselect.ks", target:"*start_かりん" ],
+	"弓"       => %[ storage:"scnselect.ks", target:"*start_弓"     ],
+	"志穂"     => %[ storage:"scnselect.ks", target:"*start_恋川",    enabled:(sf.clear_共通ルート)   ], // 恋川ルート
+
+
+	// アペンド
+	"ap明日葉" => %[ storage:"start_ap明日葉.ks", target:"*start", enabled:(sf.clear_明日葉ルート) ],
+	"ap月詠"   => %[ storage:"start_ap月詠.ks",   target:"*start", enabled:(sf.clear_月詠ルート) ],
+	"ap椎名"   => %[ storage:"start_ap椎名.ks",   target:"*start", enabled:(sf.clear_椎名ルート) ],
+	"apかりん" => %[ storage:"start_apかりん.ks", target:"*start", enabled:(sf.clear_かりんルート) ],
+	"ap弓"     => %[ storage:"start_ap弓.ks",     target:"*start", enabled:(sf.clear_弓ルート) ],
+	"桜子"     => %[ storage:"sakF[0612]11_遅く起きた朝は.ks",   target:"*start", enabled:(sf.clear_恋川) ],
+
+	//------------------------------
+	// Another タブ
+
+	"脱衣"     => %[ storage:"scnselect.ks", target:"*start_脱衣",     enabled:(sf.clear_グランドルート)],
+
+	//                                                                          shortもしくは恋川ルートクリア後
+	"碧島"     => %[ storage:"scnselect.ks", target:"*start_碧島",     enabled:(sf.clear_サブ) ],
+
+	//                                                                          碧島クリア後
+	"グランド" => %[ storage:"scnselect.ks", target:"*start_グランド", enabled:(sf.clear_碧島旅行) ],
+	
+	"いのり"     => %[ storage:"scnselect.ks", target:"*start_いのり",    enabled:(sf.clear_碧島旅行)   ], 
+
+	//------------------------------
+	// Short タブ
+
+	"桜子s"    => %[ storage:"scnselect.ks", target:"*start_桜子s",    enabled:(sf.clear_明日葉ルート) ],
+	"リコs"    => %[ storage:"scnselect.ks", target:"*start_リコs",    enabled:(sf.clear_月詠ルート)   ],
+	"オカ研s"  => %[ storage:"scnselect.ks", target:"*start_オカ研s",  enabled:(sf.clear_椎名ルート)   ],
+	"茶道部s"  => %[ storage:"scnselect.ks", target:"*start_茶道部s",  enabled:(sf.clear_かりんルート) ],
+	"ic研s"    => %[ storage:"scnselect.ks", target:"*start_ic研s",    enabled:(sf.clear_弓ルート)     ],
+
+	//------------------------------
+	// Special タブ
+
+	"ムービー" => %[ storage:"scnselect.ks", target:"*start_ムービー", enabled:(sf.clear_碧島旅行)     ],
+	"ss"       => %[ storage:"scnselect.ks", target:"*start_ss",       enabled:(sf.clear_恋川ルート)   ], // Mini Scenario
+	"おまけ"   => %[ storage:"scnselect.ks", target:"*start_おまけ",   enabled:(sf.clear_MiniScenario) ],
+
+	]
